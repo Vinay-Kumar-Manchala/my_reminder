@@ -18,7 +18,7 @@ steps:
       - 'ssh'
       - 'reminder-redis-postgres'
       - '--command'
-      - 'docker pull vinaykumar478/my_reminder:latest && docker run -d -p 8989:8989 -v cron-vol:/var/spool/cron/crontabs/ asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my-reminder:latest'
+      - 'docker pull vinaykumar478/my_reminder:latest && docker run -d -p 8989:8989 -v cron-vol:/var/spool/cron/crontabs/ vinaykumar478/my_reminder:latest'
 
 options:
   logging: CLOUD_LOGGING_ONLY
