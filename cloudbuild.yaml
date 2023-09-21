@@ -4,12 +4,12 @@ steps:
     args:
       - 'build'
       - '-t'
-      - 'vinaykumar478/my_reminder'
+      - 'docker.io/vinaykumar478/my_reminder'
       - '.'
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
-      - 'vinaykumar478/my_reminder'
+      - 'docker.io/vinaykumar478/my_reminder'
 
   # Step 2: Deploy Docker Container
   - name: 'gcr.io/cloud-builders/gcloud'
@@ -18,7 +18,7 @@ steps:
       - 'ssh'
       - 'reminder-redis-postgres'
       - '--command'
-      - 'docker pull vinaykumar478/my_reminder:latest && docker run -d -p 8989:8989 -v cron-vol:/var/spool/cron/crontabs/ vinaykumar478/my_reminder:latest'
+      - 'docker pull docker.io/vinaykumar478/my_reminder:latest && docker run -d -p 8989:8989 -v cron-vol:/var/spool/cron/crontabs/ docker.io/vinaykumar478/my_reminder:latest'
 
 options:
   logging: CLOUD_LOGGING_ONLY
