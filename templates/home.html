@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <title>My Reminder</title>
+    <link rel="icon" type="images/x-icon" href="{% static '/images/fire1.png' %}" />
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column; /* Change to column layout */
+            align-items: center; /* Center content horizontally */
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+        }
+
+        .side-title {
+            background-color: #fff;
+            text-align: center;
+            padding: 25px 75px 75px 75px;
+        }
+
+        .hero {
+            background-image: url("{% static 'images/schedule.jpg' %}");
+            background-size: contain; /* Change to contain */
+            background-repeat: no-repeat; /* Prevent repeating if the image is smaller than the container */
+            background-position: center; /* Center the image horizontally and vertically */
+            color: #045F5F;
+            padding: 100px;
+            min-height: 150px; /* Set a minimum height for the .hero container */
+            min-width: 500px;
+        }
+
+        .about {
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 5px; /* Add rounded corners to the container */
+        }
+
+        .about h2 {
+            text-align: center;
+        }
+
+        .about-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .about-list li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff; /* Set a background color */
+            box-shadow: 0 4px 6px rgba(63, 81, 181, 0.5);
+            text-align: center;
+        }
+
+        .container a {
+            margin: 10px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .container a button {
+            padding: 10px 20px;
+            background-color: #045F5F;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .highlighted-link {
+            color: #045F5F;
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>My Reminder 🕒</h1>
+</header>
+
+<nav>
+    <a href="#about" class="highlighted-link">About</a> |
+    <a href="/author" class="highlighted-link">Author</a> |
+</nav>
+
+<div class="container">
+    <div class="hero">
+        <h1>.</h1>
+    </div>
+
+    <div class="side-title">
+        <h1>Schedule your Reminders</h1>
+        <a href="/login-form"><button>Login</button></a>
+        <a href="/signup"><button>Sign Up</button></a>
+    </div>
+</div>
+
+<div class="about" id="about">
+    <h2>About this website</h2>
+    <ul class="about-list">
+        <li>Create Alerts: You have the power to create alerts for anything under the sun. It's like having your very own personal assistant.</li>
+        <li>Schedule Alerts: We've got your back! You get to choose when you receive your alerts, ensuring they arrive at the perfect moment, just when you need them most.</li>
+        <li>Customize Time: Make it uniquely yours! Tailor the alert timing to match your schedule, so they won't disturb you during your busy hours. It's all about convenience.</li>
+        <li>Unlimited Alerts: No limits here! You can create as many alerts as your heart desires. Stay connected to what matters most without restrictions.</li>
+        <li>Email Notifications: Stay in the loop! Receive alerts directly in your email inbox, making it super convenient to stay informed and always in the know.</li>
+    </ul>
+</div>
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li>{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+</body>
+</html>

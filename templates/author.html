@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="description" content="Explore Vinay Kumar Manchala's personal website. Learn about his technology stack and professional journey as a Software Engineer.">
+    <title>My Reminder</title>
+    <link rel="icon" type="images/gif" href="{% static '/images/fire1.png' %}" />
+    <style>
+        .tech-box {
+            margin: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+        }
+
+        .inner-main-headings {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .tech-content p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 255, 0.1);
+            text-align: center;
+        }
+
+        .author-info {
+            margin-bottom: 30px;
+        }
+
+        .author-name {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .author-bio {
+            font-size: 18px;
+            color: #555;
+        }
+
+        footer {
+            max-width: 1400px;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-top: 1px solid #ccc;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 255, 0.1);
+        }
+
+        .tech-content {
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+            padding: 15px 0;
+        }
+
+        .spaced-paragraph {
+            margin: 20px;
+        }
+
+        .inner-main-headings {
+            margin-left: 30px;
+        }
+
+        .home-button {
+            display: inline-block;
+            padding: 10px;
+            background-color: #000000;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .about-content h2,
+        .about-tech h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .tech-content img {
+            width: 25px;
+            height: 25px;
+            margin-right: 15px;
+        }
+
+        .about-tech p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        footer p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <a href="/" class="home-button">Home</a>
+    <div class="container">
+        <div class="author-info">
+            <div class="author-name">Vinay Kumar Manchala</div>
+            <div class="author-bio">Software Engineer 💻</div>
+        </div>
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p class="spaced-paragraph">
+                Hey there! I'm Vinay Kumar, an enthusiastic tech explorer with around 1.5 years of hands-on experience
+                in the IT world. Currently, I'm part of KnowledgeLens: A Rockwell Automation Company, where I started
+                as an intern and eventually transitioned into a full-time role.
+            </p>
+            <p class="spaced-paragraph">
+                I rolled up my sleeves and put this website together during my downtime. Wanted to get my hands dirty
+                with some fresh technologies, and what better canvas than a website, right?
+            </p>
+        </div>
+
+        <div class="tech-container">
+            <h2>Tech Stack Used For This Website</h2>
+            <h4 class="inner-main-headings">Hosting</h4>
+            <div class="tech-box">
+                <img src="{% static '/images/gcp_icon.png' %}" alt="GCP Icon" style="width:25px;height:20px;padding:15px;">
+                <p>
+                    For hosting this website, I hopped on the Google Cloud Platform's (GCP) Compute Engine train.
+                    Yes, I went for the free tier version because, you know, why not? It's all about getting the tech
+                    gears in motion without breaking my bank account! 🚀
+                </p>
+            </div>
+
+            <h4 class="inner-main-headings">Framework and Programming Language</h4>
+            <div class="tech-box">
+                <img src="{% static '/images/py_django.png' %}" alt="Django Icon" style="width:25px;height:20px;padding:15px;">
+                <p> Django had been on my learning radar for a while, so I thought, "Why not?" With Python as my trusty
+                    companion and go-to language, diving into Django was like taking a familiar path through new
+                    territory. It's the beauty of blending what I know with what I'm eager to discover! 🌐🐍 </p>
+            </div>
+
+            <h4 class="inner-main-headings">UI</h4>
+            <div class="tech-box">
+                <img src="{% static '/images/html_css.png' %}" alt="Html & CSS Icon" style="width:25px;height:25px;padding:15px;">
+                <p>I took a delightful dip into the world of UI with HTML and CSS. Thanks to the wonderful guidance from
+                    w3schools and the creative nudges from ChatGPT, I navigated through the mysteries of web styling.
+                    It's like adding some paint and flair to the tech canvas! 🎨🌐</p>
+            </div>
+
+            <h4 class="inner-main-headings">Databases</h4>
+            <div class="tech-box">
+                <img src="{% static '/images/postgres_icon.png' %}" alt="Postgres Icon" style="width:25px;height:22px;padding:15px;">
+                <p> For this website's data management, I turned to Postgres. It's running as a separate container right within the same virtual machine. 📦💻</p>
+
+            </div>
+
+            <h4 class="inner-main-headings">Repositories</h4>
+            <div class="tech-box">
+                 <img src="{% static '/images/docker.png' %}" alt="Docker Icon" style="width:25px;height:25px;padding:15px;">
+                <p> To keep things tidy and organized, I employed Docker. It's like putting the app in a digital
+                    box – everything it needs neatly packed and isolated. 🐳🚀 </p>
+            </div>
+            <p style="font-weight: bold;">The Docker image for this project is <a href="https://hub.docker.com/repository/docker/vinaykumar478/myrepo/" target="_blank">here</a>.</p>
+        </div>
+    </div>
+
+<footer>
+    <div class="tech-content" style="margin-left: 0px">
+        <img src="{% static '/images/linkedin.png' %}" alt="LinkedIn Icon">
+        <a href="https://www.linkedin.com/in/vinay-kumar-manchala-501a5a220/" target="_blank">My LinkedIn Profile</a>
+    </div>
+    <p>
+        Thanks for checking out my website ❤️! I hope you had a good time exploring. If you're up for a chat or
+        just want to connect, don't hesitate to find me on LinkedIn. I'm excited to connect with fellow
+        tech enthusiasts like you. Stay awesome! 👋🌟
+    </p>
+</footer>
+</body>
+</html>

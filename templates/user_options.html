@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reminder</title>
+    <link rel="icon" type="images/x-icon" href="{% static '/images/fire1.png' %}" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5; /* Add a background color for the body */
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff; /* Add a background color for the container */
+            border-radius: 10px; /* Increase border radius for a softer look */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance the box shadow */
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        .success-message {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+        }
+
+        .tab {
+            margin: 0 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .tab:hover {
+            background-color: #0056b3;
+        }
+
+        .home-button {
+            display: inline-block;
+            padding: 10px;
+            background-color: #000000;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <a href="/" class="home-button">Home</a>
+    <div class="container">
+        <h1>Login Successful</h1>
+        <p class="success-message">Welcome! Your login was successful.</p>
+        <div class="tabs">
+            <a href="/add_job" class="tab">Add Jobs</a>
+            <a href="/scheduled_jobs" class="tab">View Scheduled Jobs</a>
+        </div>
+    </div>
+</body>
+</html>

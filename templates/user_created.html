@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reminder</title>
+    <link rel="icon" type="images/x-icon" href="{% static '/images/fire1.png' %}" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            align: center;
+        }
+
+        h1 {
+            color: #44AA18;
+        }
+
+        .message {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .home-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .home-button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Success !</h1>
+        <p class="message">Your account has been created successfully. Login with your credentials to continue.</p>
+        <a href="/login-form" class="home-button">Back to Login</a>
+    </div>
+</body>
+</html>

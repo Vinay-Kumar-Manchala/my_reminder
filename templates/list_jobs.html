@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reminder</title>
+    <link rel="icon" type="images/x-icon" href="{% static '/images/fire1.png' %}" />
+    <style>
+    table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    }
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .home-button {
+        display: inline-block;
+        padding: 10px;
+        background-color: #000000;
+        color: #FFFFFF;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    </style>
+</head>
+<body>
+    <a href="/user_options" class="home-button">Back</a>
+    <h1>Your Jobs</h1>
+
+    <p>User : {{ name }}</p>
+
+    <table>
+        <tr>
+            <th>Email</th>
+            <th>Schedule</th>
+            <th>Created At</th>
+            <th>Option</th>
+        </tr>
+        {% for person in people %}
+        <tr>
+            <td>{{ person.email_id }}</td>
+            <td>{{ person.cron_schedule }}</td>
+            <td>{{ person.created_at }}</td>
+            <td><form method="post" action="/delete_job">
+                {% csrf_token %}
+                <input type="hidden" name="job_id" value="{{ person.job_id }}">
+                <button type="submit">Delete</button>
+            </form></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,141 @@
+2023-09-07 11:11:30 - ERROR  - logs/Reminder_logs - [Thread-3:views.py:add_cron():104] - Error occurred while adding cron to the file due to [Errno 2] No such file or directory: '/var/spool/cron/crontabs/root'
+2023-09-07 11:43:55 - ERROR  - logs/Reminder_logs - [Thread-9:views.py:add_cron():104] - Error occurred while adding cron to the file due to [Errno 2] No such file or directory: '/var/spool/cron/crontabs/root'
+2023-09-07 15:28:17 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:get_login_form():92] - Error occurred while validating the user mail due to login.html
+2023-09-07 15:29:59 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:create_user():106] - Exception occurred while creating user due to 'email_id'
+2023-09-07 16:16:09 - ERROR  - logs/Reminder_logs - [Thread-5:views.py:create_user():112] - Exception occurred while creating user due to 'email_id'
+2023-09-07 16:16:39 - ERROR  - logs/Reminder_logs - [Thread-7:views.py:create_user():112] - Exception occurred while creating user due to 'email_id'
+2023-09-07 16:18:24 - ERROR  - logs/Reminder_logs - [Thread-3:views.py:create_user():112] - Exception occurred while creating user due to Incorrect AES key length (6 bytes)
+2023-09-07 16:35:27 - ERROR  - logs/Reminder_logs - [Thread-8:views.py:create_user():112] - Exception occurred while creating user due to fromisoformat: argument must be str
+2023-09-07 16:37:42 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:create_user():112] - Exception occurred while creating user due to value too long for type character varying(20)
+
+2023-09-07 16:59:35 - ERROR  - logs/Reminder_logs - [Thread-4:get_validated.py:validate_login():55] - Exception when logging in 'Accounts' object is not subscriptable
+Traceback (most recent call last):
+  File "D:\my_projects\my_reminder\users\validation\get_validated.py", line 41, in validate_login
+    user_data[0]["password"]
+TypeError: 'Accounts' object is not subscriptable
+2023-09-07 17:00:25 - ERROR  - logs/Reminder_logs - [Thread-1:get_validated.py:validate_login():55] - Exception when logging in 'Accounts' object is not subscriptable
+Traceback (most recent call last):
+  File "D:\my_projects\my_reminder\users\validation\get_validated.py", line 41, in validate_login
+    user_data[0]["password"]
+TypeError: 'Accounts' object is not subscriptable
+2023-09-07 17:53:30 - ERROR  - logs/Reminder_logs - [Thread-7:get_validated.py:validate_login():54] - Exception when logging in 'Accounts' object is not subscriptable
+Traceback (most recent call last):
+  File "D:\my_projects\my_reminder\users\validation\get_validated.py", line 41, in validate_login
+    user_data[0]["password"]
+TypeError: 'Accounts' object is not subscriptable
+2023-09-07 17:53:49 - ERROR  - logs/Reminder_logs - [Thread-10:get_validated.py:validate_login():54] - Exception when logging in 'Accounts' object is not subscriptable
+Traceback (most recent call last):
+  File "D:\my_projects\my_reminder\users\validation\get_validated.py", line 41, in validate_login
+    user_data[0]["password"]
+TypeError: 'Accounts' object is not subscriptable
+2023-09-07 18:04:05 - ERROR  - logs/Reminder_logs - [Thread-1:get_validated.py:validate_login():48] - Failed to login : Invalid salt
+2023-09-07 18:04:30 - ERROR  - logs/Reminder_logs - [Thread-8:get_validated.py:validate_login():48] - Failed to login : Invalid salt
+2023-09-07 18:10:05 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:create_user():112] - Exception occurred while creating user due to server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+2023-09-07 18:10:51 - ERROR  - logs/Reminder_logs - [Thread-13:get_validated.py:validate_login():50] - Failed to login : Invalid salt
+2023-09-07 18:20:00 - ERROR  - logs/Reminder_logs - [Thread-1:get_validated.py:validate_login():50] - Failed to login : Invalid base64-encoded string: number of data characters (57) cannot be 1 more than a multiple of 4
+2023-09-07 18:22:54 - ERROR  - logs/Reminder_logs - [Thread-1:get_validated.py:validate_login():50] - Failed to login : Data must be padded to 16 byte boundary in CBC mode
+2023-09-07 18:36:33 - ERROR  - logs/Reminder_logs - [Thread-2:views.py:create_user():118] - Exception occurred while creating user due to Fernet key must be 32 url-safe base64-encoded bytes.
+2023-09-07 18:37:28 - ERROR  - logs/Reminder_logs - [Thread-5:views.py:create_user():118] - Exception occurred while creating user due to Fernet key must be 32 url-safe base64-encoded bytes.
+2023-09-07 18:43:33 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:create_user():118] - Exception occurred while creating user due to data must be bytes
+2023-09-07 18:44:49 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:create_user():118] - Exception occurred while creating user due to data must be bytes
+2023-09-07 18:49:03 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:create_user():118] - Exception occurred while creating user due to connection to server at "34.100.243.227", port 5432 failed: Connection timed out (0x0000274C/10060)
+	Is the server running on that host and accepting TCP/IP connections?
+
+2023-09-07 18:50:20 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:create_user():118] - Exception occurred while creating user due to value too long for type character varying(100)
+
+2023-09-07 18:50:59 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:create_user():119] - Exception occurred while creating user due to value too long for type character varying(100)
+
+2023-09-07 18:52:25 - ERROR  - logs/Reminder_logs - [Thread-12:get_validated.py:validate_login():57] - Failed to login : 'str' object has no attribute 'decode'
+2023-09-07 18:52:30 - ERROR  - logs/Reminder_logs - [Thread-12:get_validated.py:validate_login():57] - Failed to login : 'str' object has no attribute 'decode'
+2023-09-08 14:26:25 - ERROR  - logs/Reminder_logs - [Thread-6:views.py:create_user():115] - Exception occurred while creating user due to Incorrect AES key length (6 bytes)
+2023-09-08 15:09:16 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:login():145] - Error occurred while logging in due to 'HttpResponse' object has no attribute 'lower'
+2023-09-08 15:52:18 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:login():150] - Error occurred while logging in due to Incorrect padding
+2023-09-08 18:07:48 - ERROR  - logs/Reminder_logs - [Thread-14:views.py:add_cron():174] - Error occurred while adding cron to the file due to [Errno 2] No such file or directory: '/var/spool/cron/crontabs/root'
+2023-09-11 11:20:54 - ERROR  - logs/Reminder_logs - [Thread-3:views.py:scheduled_jobs():36] - Error occurred in scheduled_jobs due to argument should be a bytes-like object or ASCII string, not 'NoneType'
+2023-09-11 11:21:42 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:scheduled_jobs():36] - Error occurred in scheduled_jobs due to argument should be a bytes-like object or ASCII string, not 'NoneType'
+2023-09-11 12:56:15 - ERROR  - logs/Reminder_logs - [Thread-7:get_validated.py:validate_login():29] - Exception when logging in 'email_id'
+Traceback (most recent call last):
+  File "C:\Users\vinaykumar.manchala\AppData\Local\Continuum\miniconda3\envs\vinay_kumar\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'email_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_projects\my_reminder\users\validation\get_validated.py", line 16, in validate_login
+    user_data = Accounts.objects.filter(email_id=request_json[CommonConstants.email_id])
+  File "C:\Users\vinaykumar.manchala\AppData\Local\Continuum\miniconda3\envs\vinay_kumar\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'email_id'
+2023-09-11 12:56:32 - ERROR  - logs/Reminder_logs - [Thread-12:get_validated.py:validate_login():29] - Exception when logging in 'email_id'
+Traceback (most recent call last):
+  File "C:\Users\vinaykumar.manchala\AppData\Local\Continuum\miniconda3\envs\vinay_kumar\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'email_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_projects\my_reminder\users\validation\get_validated.py", line 16, in validate_login
+    user_data = Accounts.objects.filter(email_id=request_json[CommonConstants.email_id])
+  File "C:\Users\vinaykumar.manchala\AppData\Local\Continuum\miniconda3\envs\vinay_kumar\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'email_id'
+2023-09-11 12:56:58 - ERROR  - logs/Reminder_logs - [Thread-15:get_validated.py:validate_login():29] - Exception when logging in 'email_id'
+Traceback (most recent call last):
+  File "C:\Users\vinaykumar.manchala\AppData\Local\Continuum\miniconda3\envs\vinay_kumar\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'email_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_projects\my_reminder\users\validation\get_validated.py", line 16, in validate_login
+    user_data = Accounts.objects.filter(email_id=request_json[CommonConstants.email_id])
+  File "C:\Users\vinaykumar.manchala\AppData\Local\Continuum\miniconda3\envs\vinay_kumar\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'email_id'
+2023-09-11 13:01:26 - ERROR  - logs/Reminder_logs - [Thread-5:get_validated.py:validate_login():29] - Exception when logging in 'email_id'
+Traceback (most recent call last):
+  File "C:\Users\vinaykumar.manchala\AppData\Local\Continuum\miniconda3\envs\vinay_kumar\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'email_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my_projects\my_reminder\users\validation\get_validated.py", line 16, in validate_login
+    user_data = Accounts.objects.filter(email_id=request_json[CommonConstants.email_id])
+  File "C:\Users\vinaykumar.manchala\AppData\Local\Continuum\miniconda3\envs\vinay_kumar\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'email_id'
+2023-09-12 10:42:35 - ERROR  - logs/Reminder_logs - [Thread-3:views.py:verify_email_link():172] - Error occurred while fetching login form due to Reverse for 'success' not found. 'success' is not a valid view function or pattern name.
+2023-09-12 10:42:45 - ERROR  - logs/Reminder_logs - [Thread-6:views.py:verify_email_link():172] - Error occurred while fetching login form due to Reverse for 'success' not found. 'success' is not a valid view function or pattern name.
+2023-09-12 11:13:37 - ERROR  - logs/Reminder_logs - [Thread-29:views.py:mail_validation():197] - Error occurred while fetching login form due to 'str' object has no attribute 'html'
+2023-09-12 11:15:23 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:mail_validation():197] - Error occurred while fetching login form due to 'str' object has no attribute 'html'
+2023-09-12 11:15:47 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:mail_validation():197] - Error occurred while fetching login form due to 'str' object has no attribute 'html'
+2023-09-12 11:16:34 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:mail_validation():197] - Error occurred while fetching login form due to Reverse for '/login' not found. '/login' is not a valid view function or pattern name.
+2023-09-12 11:20:42 - ERROR  - logs/Reminder_logs - [Thread-3:views.py:mail_validation():197] - Error occurred while fetching login form due to Reverse for '/login-form' not found. '/login-form' is not a valid view function or pattern name.
+2023-09-12 11:21:41 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:mail_validation():197] - Error occurred while fetching login form due to Reverse for '/login-form' not found. '/login-form' is not a valid view function or pattern name.
+2023-09-12 11:23:39 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:mail_validation():197] - Error occurred while fetching login form due to Reverse for 'login-form' not found. 'login-form' is not a valid view function or pattern name.
+2023-09-12 11:25:44 - ERROR  - logs/Reminder_logs - [Thread-2:views.py:mail_validation():197] - Error occurred while fetching login form due to Reverse for 'login-form' not found. 'login-form' is not a valid view function or pattern name.
+2023-09-12 11:26:16 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:mail_validation():197] - Error occurred while fetching login form due to Reverse for 'login-form/' not found. 'login-form/' is not a valid view function or pattern name.
+2023-09-12 11:26:38 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:mail_validation():197] - Error occurred while fetching login form due to Reverse for '/login-form/' not found. '/login-form/' is not a valid view function or pattern name.
+2023-09-12 11:27:02 - ERROR  - logs/Reminder_logs - [Thread-2:views.py:mail_validation():197] - Error occurred while fetching login form due to Reverse for '/login-form' not found. '/login-form' is not a valid view function or pattern name.
+2023-09-12 11:30:21 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:mail_validation():197] - Error occurred while fetching login form due to Reverse for 'login_form' not found. 'login_form' is not a valid view function or pattern name.
+2023-09-12 11:34:58 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:login():229] - Error occurred while logging in due to Reverse for 'login_form' not found. 'login_form' is not a valid view function or pattern name.
+2023-09-12 11:36:14 - ERROR  - logs/Reminder_logs - [Thread-3:views.py:verify_email_link():180] - Error occurred while fetching login form due to Reverse for 'user_options' not found. 'user_options' is not a valid view function or pattern name.
+2023-09-12 11:40:22 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:verify_email_link():180] - Error occurred while fetching login form due to Reverse for 'user_options' not found. 'user_options' is not a valid view function or pattern name.
+2023-09-12 11:44:06 - ERROR  - logs/Reminder_logs - [Thread-13:views.py:verify_email_link():180] - Error occurred while fetching login form due to Reverse for 'user_options' not found. 'user_options' is not a valid view function or pattern name.
+2023-09-12 11:44:48 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:user_options():138] - Error occurred while validating the user mail due to Invalid base64-encoded string: number of data characters (105) cannot be 1 more than a multiple of 4
+2023-09-12 11:49:14 - ERROR  - logs/Reminder_logs - [Thread-3:views.py:user_options():138] - Error occurred while validating the user mail due to Invalid base64-encoded string: number of data characters (105) cannot be 1 more than a multiple of 4
+2023-09-12 11:49:47 - ERROR  - logs/Reminder_logs - [Thread-3:views.py:user_options():138] - Error occurred while validating the user mail due to Invalid base64-encoded string: number of data characters (105) cannot be 1 more than a multiple of 4
+2023-09-12 11:51:27 - ERROR  - logs/Reminder_logs - [Thread-5:views.py:user_options():138] - Error occurred while validating the user mail due to Invalid base64-encoded string: number of data characters (105) cannot be 1 more than a multiple of 4
+2023-09-12 11:54:48 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:user_options():138] - Error occurred while validating the user mail due to Invalid base64-encoded string: number of data characters (105) cannot be 1 more than a multiple of 4
+2023-09-12 11:57:26 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:user_options():138] - Error occurred while validating the user mail due to Incorrect padding
+2023-09-12 12:03:55 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:user_options():138] - Error occurred while validating the user mail due to Incorrect padding
+2023-09-12 12:08:26 - ERROR  - logs/Reminder_logs - [Thread-1:views.py:user_options():138] - Error occurred while validating the user mail due to Incorrect padding
+2023-09-12 12:21:36 - ERROR  - logs/Reminder_logs - [Thread-4:views.py:add_cron():241] - Error occurred while adding cron to the file due to [Errno 2] No such file or directory: '/var/spool/cron/crontabs/root'
