@@ -1,13 +1,24 @@
-# build docker image
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my-reminder', '.' ]
+  # Step 1: Build and Push Docker Image
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'vinaykumar478/my_reminder'
+      - '.'
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'vinaykumar478/my_reminder'
 
-
-# push docker image
-images:
-- 'asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my-reminder'
-
+  # Step 2: Deploy Docker Container
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args:
+      - 'compute'
+      - 'ssh'
+      - 'reminder-redis-postgres'
+      - '--command'
+      - 'docker pull vinaykumar478/my_reminder:latest && docker run -d -p 8989:8989 -v cron-vol:/var/spool/cron/crontabs/ asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my-reminder:latest'
 
 options:
- logging: CLOUD_LOGGING_ONLY
+  logging: CLOUD_LOGGING_ONLY
