@@ -1,12 +1,12 @@
 # build docker image
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'us-central1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my-reminder', '.' ]
+  args: [ 'build', '-t', 'asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my-reminder', '.' ]
 
 
 # push docker image
 images:
-- 'us-central1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my-reminder'
+- 'asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my-reminder'
 
 
 options:
