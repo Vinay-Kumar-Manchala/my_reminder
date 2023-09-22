@@ -4,21 +4,21 @@ steps:
     args:
       - 'build'
       - '-t'
-      - 'docker.io/vinaykumar478/my_reminder'
+      - 'asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my_reminder:latest'
       - '.'
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
-      - 'docker.io/vinaykumar478/my_reminder'
+      - 'asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my_reminder:latest'
 
-  # Step 2: Deploy Docker Container
+  # Step 2: SSH into GCE Instance and Deploy
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
       - 'compute'
       - 'ssh'
       - 'reminder-redis-postgres'
       - '--command'
-      - 'docker pull docker.io/vinaykumar478/my_reminder:latest && docker run -d -p 8989:8989 -v cron-vol:/var/spool/cron/crontabs/ docker.io/vinaykumar478/my_reminder:latest'
+      - 'docker pull asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my_reminder:latest && docker run -d -p 8989:8989 -v cron-vol:/var/spool/cron/crontabs/ asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my_reminder:latest'
 
 options:
   logging: CLOUD_LOGGING_ONLY
