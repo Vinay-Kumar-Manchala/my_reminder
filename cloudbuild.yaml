@@ -1,25 +1,25 @@
 steps:
   # Step 1: Build and Push Docker Image
-  - name: 'gcr.io/cloud-builders/docker'
+  - name: 'gcr.io/fluted-expanse-396704/docker'
     args:
       - 'build'
       - '-t'
-      - 'asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my_reminder:latest'
+      - 'asia-south1-docker.pkg.dev/fluted-expanse-396704/cloud-run-source-deploy/my_reminder/reminder-service:latest'
       - '.'
-  - name: 'gcr.io/cloud-builders/docker'
+  - name: 'gcr.io/fluted-expanse-396704/docker'
     args:
       - 'push'
-      - 'asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my_reminder:latest'
+      - 'asia-south1-docker.pkg.dev/fluted-expanse-396704/cloud-run-source-deploy/my_reminder/reminder-service:latest'
 
   # Step 2: SSH into GCE Instance and Deploy
-  - name: 'gcr.io/cloud-builders/gcloud'
+  - name: 'gcr.io/fluted-expanse-396704/gcloud'
     args:
       - 'compute'
       - 'ssh'
       - 'reminder-redis-postgres'
       - '--zone=asia-south1-c'
       - '--command'
-      - 'docker pull asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my_reminder:latest && docker run -d -p 8989:8989 -v cron-vol:/var/spool/cron/crontabs/ asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my_reminder:latest'
+      - 'docker pull asia-south1-docker.pkg.dev/fluted-expanse-396704/cloud-run-source-deploy/my_reminder/reminder-service:latest && docker run -d -p 8989:8989 -v cron-vol:/var/spool/cron/crontabs/ asia-south1-docker.pkg.dev/fluted-expanse-396704/cloud-run-source-deploy/my_reminder/reminder-service:latest'
 
 options:
   logging: CLOUD_LOGGING_ONLY
