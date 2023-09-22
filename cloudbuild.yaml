@@ -17,6 +17,7 @@ steps:
       - 'compute'
       - 'ssh'
       - 'reminder-redis-postgres'
+      - '--zone=asia-south1-c'
       - '--command'
       - 'docker pull asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my_reminder:latest && docker run -d -p 8989:8989 -v cron-vol:/var/spool/cron/crontabs/ asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my_reminder:latest'
 
