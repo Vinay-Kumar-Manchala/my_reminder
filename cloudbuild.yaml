@@ -1,17 +1,17 @@
 steps:
   # Step 1: Build Docker Image
-  - name: 'gcr.io/fluted-expanse-396704/docker'
+  - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'build'
       - '-t'
-      - 'asia-south1-docker.pkg.dev/fluted-expanse-396704/cloud-run-source-deploy/my_reminder/reminder-service:latest'
+      - 'asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my_reminder:latest'
       - '.'
 
   # Step 2: Push Docker Image to a Container Registry (if needed)
-  - name: 'gcr.io/fluted-expanse-396704/docker'
+  - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
-      - 'asia-south1-docker.pkg.dev/fluted-expanse-396704/cloud-run-source-deploy/my_reminder/reminder-service:latest'
+      - 'asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my_reminder:latest'
 
   # Step 3: Run Tests (if you have tests to run)
 
@@ -24,14 +24,14 @@ steps:
       - '--command'
       - |
         # Pull the latest Docker image
-        docker pull asia-south1-docker.pkg.dev/fluted-expanse-396704/cloud-run-source-deploy/my_reminder/reminder-service:latest
+        docker pull asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my_reminder:latest
         
         # Stop and remove any existing container (if applicable)
         docker stop reminder_container || true
         docker rm reminder_container || true
         
         # Run the new container with appropriate configurations
-        docker run -d -p 8989:8989 --name reminder_container -v cron-vol:/var/spool/cron/crontabs/ asia-south1-docker.pkg.dev/fluted-expanse-396704/cloud-run-source-deploy/my_reminder/reminder-service:latest
+        docker run -d -p 8989:8989 --name reminder_container -v cron-vol:/var/spool/cron/crontabs/ asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my_reminder:latest
 
 images:
   - 'gcr.io/cloud-builders/docker'
