@@ -21,6 +21,7 @@ steps:
       - 'compute'
       - 'ssh'
       - 'reminder-redis-postgres'
+      - '--zone=asia-south1-c'
       - '--command'
       - |
         # Pull the latest Docker image
