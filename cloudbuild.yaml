@@ -22,7 +22,8 @@ steps:
       - 'ssh'
       - 'reminder-redis-postgres'
       - '--command'
-      - # Pull the latest Docker image
+      - |
+        # Pull the latest Docker image
         docker pull asia-south1-docker.pkg.dev/fluted-expanse-396704/cloud-run-source-deploy/my_reminder/reminder-service:latest
         
         # Stop and remove any existing container (if applicable)
