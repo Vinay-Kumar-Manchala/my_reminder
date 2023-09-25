@@ -7,7 +7,7 @@ steps:
       - 'asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my_reminder:latest'
       - '.'
 
-  # Step 2: Push Docker Image to a Container Registry (if needed)
+  # Step 2: Push Docker Image to a Container Registry
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
