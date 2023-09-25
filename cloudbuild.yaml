@@ -13,7 +13,7 @@ steps:
       - 'push'
       - 'asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my_reminder:latest'
 
-  # Step 3: Run Tests (if you have tests to run)
+  # Step 3: Run Tests
 
   # Step 4: SSH into VM and Deploy Container
   - name: 'gcr.io/cloud-builders/gcloud'
@@ -27,7 +27,7 @@ steps:
         # Pull the latest Docker image
         docker pull asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my_reminder:latest
         
-        # Stop and remove any existing container (if applicable)
+        # Stop and remove any existing container
         docker stop reminder_container || true
         docker rm reminder_container || true
         
