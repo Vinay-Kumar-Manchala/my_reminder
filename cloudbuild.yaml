@@ -24,18 +24,14 @@ steps:
       - '--zone=asia-south1-c'
       - '--command'
       - |
-        # Pull the latest Docker image
         docker pull asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my_reminder:latest
-        
-        # Stop and remove any existing container
         docker stop reminder_container || true
         docker rm reminder_container || true
-        
-        # Run the new container with appropriate configurations
         docker run -d -p 8989:8989 --name reminder_container -v cron-vol:/var/spool/cron/crontabs/ asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my_reminder:latest
 
 images:
   - 'gcr.io/cloud-builders/docker'
+  - 'gcr.io/cloud-builders/gcloud'
 
 options:
   logging: CLOUD_LOGGING_ONLY
