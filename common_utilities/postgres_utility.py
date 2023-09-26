@@ -11,7 +11,7 @@ class PostgresUtil(object):
 
     def fetch_data_from_postgres(self, query):
         """
-            This method is used for fetching the data of the table.
+            This method is used for fetching the data from the table.
             :param query: query to fetch the data.
             :return: status: The status True on success and False on failure and the data.
         """
