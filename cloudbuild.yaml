@@ -13,8 +13,6 @@ steps:
       - 'push'
       - 'asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my_reminder:latest'
 
-  # Step 3: Run Tests
-
   # Step 4: SSH into VM and Deploy Container
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
@@ -28,10 +26,6 @@ steps:
         docker stop reminder_container || true
         docker rm reminder_container || true
         docker run -d -p 8989:8989 --name reminder_container -v cron-vol:/var/spool/cron/crontabs/ asia-south1-docker.pkg.dev/fluted-expanse-396704/pipeliner/my_reminder:latest
-
-images:
-  - 'gcr.io/cloud-builders/docker'
-  - 'gcr.io/cloud-builders/gcloud'
 
 options:
   logging: CLOUD_LOGGING_ONLY
